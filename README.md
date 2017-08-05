@@ -13,5 +13,4 @@ features. New features include :
 Slave is really light and shows informations only when you **need** to see
 them. Slave should be able to run on any font or color configuration.
 
-<script type="text/javascript" src="https://asciinema.org/a/132307.js"
-id="asciicast-132307" async></script>
+[![asciicast](https://asciinema.org/a/132307.png)](https://asciinema.org/a/132307)
