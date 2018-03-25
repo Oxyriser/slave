@@ -4,7 +4,7 @@ function fish_default_mode_prompt
     set -l normal (set_color normal)
     set -l blue (set_color blue)
     set -l yellow (set_color yellow)
-    set -l green (set_color green)
+    set -l red (set_color red)
 
     switch $fish_bind_mode
       case default
@@ -14,7 +14,7 @@ function fish_default_mode_prompt
       case visual
         echo -sn $yellow"V$normal "
       case replace_one
-        echo -sn $green"R$normal "
+        echo -sn $red"R$normal "
     end
   end
 end

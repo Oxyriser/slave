@@ -9,7 +9,9 @@ function fish_right_prompt
   set_color normal
 
   if set -l job_id (last_job_id)
-    echo -sn " %($job_id)"
+    for job in $job_id
+      echo -sn " %$job"
+    end
   end
 
   set_color normal
