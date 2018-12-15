@@ -3,19 +3,21 @@ function fish_prompt
   set -l cyan (set_color cyan)
   set -l blue (set_color blue)
   set -l green (set_color green)
+  set -l orange (set_color "#ffb86c")
   set -l yellow (set_color yellow)
   set -l normal (set_color normal)
 
   if test 0 -eq (id -u $USER)
     echo -sn $red"#"
   end
-  set_color normal
+  set_color -o blue
 
   if test $PWD = ~
     echo -sn "~"
   else
     echo -sn (basename $PWD)
   end
+  set_color normal
 
   if git_is_repo
     set branch_name (git_branch_name)
@@ -29,12 +31,12 @@ function fish_prompt
       set git_glyph $git_glyph$blue"*"$normal
     end
     if git_is_stashed
-      set git_glyph $git_glyph$cyan"^"$normal
+      set git_glyph $git_glyph$orange"^"$normal
     end
     if git_is_staged
       set git_glyph $git_glyph$green"+"$normal
     end
-    echo -n " $branch_name$git_glyph"
+    echo -n " "$branch_name$git_glyph$normal
     echo -n $red(git_ahead ">" "<" "≠")$normal
   end
   echo " "
