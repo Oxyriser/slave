@@ -3,14 +3,14 @@ function fish_prompt
   set -l cyan (set_color cyan)
   set -l blue (set_color blue)
   set -l green (set_color green)
-  set -l orange (set_color "#ffb86c")
+  set -l magenta (set_color magenta)
   set -l yellow (set_color yellow)
   set -l normal (set_color normal)
 
   if test 0 -eq (id -u $USER)
     echo -sn $red"#"
   end
-  set_color -o blue
+  set_color -o
 
   if test $PWD = ~
     echo -sn "~"
@@ -31,7 +31,7 @@ function fish_prompt
       set git_glyph $git_glyph$blue"*"$normal
     end
     if git_is_stashed
-      set git_glyph $git_glyph$orange"^"$normal
+      set git_glyph $git_glyph$magenta"^"$normal
     end
     if git_is_staged
       set git_glyph $git_glyph$green"+"$normal
