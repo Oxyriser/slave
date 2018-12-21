@@ -5,19 +5,18 @@ function fish_prompt
   set -l green (set_color green)
   set -l magenta (set_color magenta)
   set -l yellow (set_color yellow)
+  set -l bold (set_color -o)
   set -l normal (set_color normal)
 
   if test 0 -eq (id -u $USER)
     echo -sn $red"#"
   end
-  set_color -o
 
   if test $PWD = ~
-    echo -sn "~"
+    echo -sn $bold"~"$normal
   else
-    echo -sn (basename $PWD)
+    echo -sn $bold(basename $PWD)$normal
   end
-  set_color normal
 
   if git_is_repo
     set branch_name (git_branch_name)
