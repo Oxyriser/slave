@@ -9,8 +9,12 @@ function fish_prompt
   set -l normal (set_color normal)
 
   if test 0 -eq (id -u $USER)
-    echo -sn $red"#"
+    echo -sn $red"#"$normal
   end
+
+  if set -q VIRTUAL_ENV
+    echo -sn  $yellow "(" (basename $VIRTUAL_ENV) ")" $normal
+end
 
   if test $PWD = ~
     echo -sn $bold"~"$normal
