@@ -7,7 +7,7 @@ function fish_right_prompt
   end
 
   if set -l job_id (last_job_id)
-    set_color $fish_color_comment
+    set_color -d
     for job in $job_id
       echo -sn " %$job"
     end
