@@ -5,7 +5,7 @@ function fish_prompt
   set -l green (set_color green)
   set -l magenta (set_color magenta)
   set -l yellow (set_color yellow)
-  set -l bold (set_color -o)
+  set -l bold (set_color -o white)
   set -l normal (set_color normal)
 
   if test 0 -eq (id -u $USER)
@@ -14,7 +14,7 @@ function fish_prompt
 
   if set -q VIRTUAL_ENV
     echo -sn  $yellow "(" (basename $VIRTUAL_ENV) ")" $normal
-end
+  end
 
   if test $PWD = ~
     echo -sn $bold"~"$normal
