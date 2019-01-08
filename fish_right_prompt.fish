@@ -6,6 +6,8 @@ function fish_right_prompt
     echo -sn "($status_copy)"
   end
 
+  set_color normal
+
   if set -l job_id (last_job_id)
     set_color -d
     for job in $job_id
