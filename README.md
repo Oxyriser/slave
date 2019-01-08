@@ -2,12 +2,11 @@
 
 Minimalistic but yet powerful prompt for fish shell.
 
-Slave is a fork of [Boss](https://github.com/fisherman/boss), with more
-features. New features include :
+## Features
 
-  * Tmux session indicator
-  * More accurate git tracking
+  * Git tracking
   * Vi mode tracking
+  * Jobs and errors tracking
   * Colorful environment
 
 Slave is really light and shows informations only when you **need** to see
@@ -22,13 +21,10 @@ them. Slave should be able to run on any font or color configuration.
 ## Installation
 
 You can install Slave with [Fisherman](https://github.com/fisherman/fisherman).
-Simply copy and paste the following lines in your terminal :
+Simply copy or type this in your terminal:
 
 ``` terminal
-git clone https://github.com/Geospace/slave.git
-cd slave
-fisher install . --link
-echo "Done !"
+fisher add Oxyriser/slave
 ```
 
 Slave is just a bunch of fish prompt functions so it can also be installed
