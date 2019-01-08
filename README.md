@@ -13,7 +13,7 @@ Slave is really light and shows informations only when you **need** to see
 them. Slave should be able to run on any font or color configuration.
 
 <p align="center">
-  <img src="screenshot.png" alt="Screenshot" width="600px">
+  <img src="screenshot.png" alt="Screenshot" width="800px">
 </p>
 
 [Click here for a demo video.](https://asciinema.org/a/132307)
