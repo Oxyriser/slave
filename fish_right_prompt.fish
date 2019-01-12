@@ -7,12 +7,10 @@ function fish_right_prompt
   end
 
   set_color normal
+  set_color -d
 
-  if set -l job_id (last_job_id)
-    set_color -d
-    for job in $job_id
-      echo -sn " %$job"
-    end
+  for i in (jobs | cut -f1)
+    echo -n " %"$i
   end
 
   set_color normal
