@@ -17,7 +17,7 @@ function fish_prompt
     echo -sn  $yellow "("(basename $VIRTUAL_ENV)")" $normal$space
   end
 
-  if test $PWD = "~"
+  if test $PWD = ~
     set path "~"
   else
     set path (basename $PWD)
