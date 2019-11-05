@@ -22,7 +22,7 @@ function fish_prompt
   else
     set path (basename $PWD)
   end
-  echo -sn $bold $path $normal$space
+  echo -sn $bold $path $normal
 
   if git_is_repo
     set -l git_glyph ""
@@ -43,8 +43,9 @@ function fish_prompt
       set git_glyph $git_glyph$green"+"$normal
     end
 
-    set git_glyph $git_glyph$red(git_ahead ">" "<" "≠")
-
-    echo -n (git_branch_name)$git_glyph$normal$space
+    echo -n $space(git_branch_name)$git_glyph$normal
+    echo -n $red(git_ahead ">" "<" "≠")$normal
   end
+
+  echo -n $space
 end
