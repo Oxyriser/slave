@@ -9,7 +9,7 @@ function fish_prompt
   set -l normal (set_color normal)
   set -l space " "
 
-  if test 0 -eq (id -u $USER)
+  if test $USER = "root"
     echo -sn $red "#" $normal$space
   end
 
